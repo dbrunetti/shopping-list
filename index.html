@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping Program</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="jumbotron" id="top">
+	<img src="images/groceries.jpg" id="background" align="middle"/>
+	<h1>My Grocery Bill</h1>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-md-offset-2 col-xs-4 col-xs-offset-1" id="enter-info">
+			<h2>Enter Items here:</h2>
+			<p>Enter item name: </p><input type="text" id="item-name"/>
+			<p>Enter price: </p><input type="text" id="item-price"/>
+			<p>Enter quantity: </p><input type="text" value="1" id="item-quantity"/>
+			<div class="button-div"><button onclick="addItem()">Add Item</button></div>
+		</div>
+		<div class="col-md-3 col-md-offset-2 col-xs-5 col-xs-offset-1 " id="make-list">
+			<h2>My list:</h2>
+			<ul id="list">
+				
+			</ul>
+			<br />
+			<h4>Subtotal: $<span id="subtotal">0.00</span></h4>
+			<h4>Tax: $<span id='tax'>0.00</span></h4>
+			<hr/>
+			<h3>Total: $<span id='total'>0.00</span></h3>
+		</div>
+	</div>
+<script src="script.js"></script>
+</body>
+</html>

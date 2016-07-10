@@ -9,21 +9,41 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<div class="jumbotron" id="top">
 	<img src="images/groceries.jpg" id="background" align="middle"/>
 	<h1>My Grocery Bill</h1>
-	</div>
 	<div class="row">
-		<div class="col-md-3 col-md-offset-2 col-xs-4 col-xs-offset-1" id="enter-info">
-			<h2>Enter Items here:</h2>
-			<p>Enter item name: </p><input type="text" id="item-name"/>
-			<p>Enter price: </p><input type="text" id="item-price"/>
-			<p>Enter quantity: </p><input type="text" value="1" id="item-quantity"/>
-			<div class="button-div"><button onclick="addItem()">Add Item</button></div>
+		<!-- Enter an item name and add it to the grocery list -->
+		<div class="col-md-3 col-md-offset-1 col-xs-4" id="enter-list">
+			<h2>Add Items to Grocery List:</h2>
+			<p>Enter item name: </p><input type="text" id="add-name"/>
+			<div class="button-div"><button onclick="addItemToList()">Add to List</button></div>
+			<div class="row">
+				<!-- List of items on list. Clicking one adds its name in the text field for add to cart -->
+				<div class="col-xs-12 " id="make-list">
+					<h3>Grocery List</h3>
+					<p>Click an item to add it to the Cart</p>
+					<ul id="on-list">
+						
+					</ul>
+				</div>
+			</div>
 		</div>
-		<div class="col-md-3 col-md-offset-2 col-xs-5 col-xs-offset-1 " id="make-list">
-			<h2>My list:</h2>
-			<ul id="list">
+		<!-- Enter an item to add it to your cart -->
+		<div class="col-md-2 col-md-offset-1 col-xs-4" id="stationary-form">
+			<div class="row">
+				<div class="col-xs-12">
+					<h2>Add Item to Cart:</h2>
+					<p>Enter item name: </p><input type="text" id="item-name"/>
+					<p>Enter price: </p><input type="text" id="item-price"/>
+					<p>Enter quantity: </p><input type="text" value="1" id="item-quantity"/>
+					<div class="button-div"><button onclick="addItemToCart()">Add to Cart</button></div>
+				</div>
+			</div>
+		</div>
+		<!-- List price and total price of items in cart -->
+		<div class="col-md-3 col-md-offset-1 col-xs-4" id="in-cart">
+			<h2>My Cart:</h2>
+			<ul id="cart-list">
 				
 			</ul>
 			<br />
